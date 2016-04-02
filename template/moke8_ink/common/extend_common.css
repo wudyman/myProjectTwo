@@ -61,4 +61,35 @@ http://www.ahome.me
              .bmw .bm_h a { color: {LIGHTLINK}; }
 			#uhd { padding-top: 10px; border-bottom: none;background:url({IMGDIR}/more/wrap.png) center top repeat;margin-bottom:-13px;}
             #uhd .tb a {background:transparent;border-top:0px;border-bottom:0px;}
-	        #uhd .tb .a a { border: 1px solid #aaaaaa; border-bottom-color: #FFF;background:#FFF;}
+	        #uhd .tb .a a { border: 1px solid #aaaaaa; border-bottom-color: #FFF;background:#FFF;}	        
+ul.countdown {
+	list-style: none;
+	width:280px;
+	/*margin: 75px 0;*/
+	padding: 0 0 0 0;
+	/*display: block;*/
+	/*text-align: center;*/
+	float:left
+}
+ul.countdown li {
+       color: #060;
+	display: inline-block;
+}
+ul.countdown li span {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 24px;
+}
+ul.countdown li.seperator {
+	font-size: 24px;
+	line-height: 22px;
+	vertical-align: top;
+}
+ul.countdown li p {
+	color: #060;
+	font-size: 18px;
+}
+ul.countdown p{
+      	color: #333;
+	font-size: 14px;
+}
