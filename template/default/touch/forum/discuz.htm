@@ -2,7 +2,6 @@
 	<!--{eval dheader('Location:forum.php?mod=guide&view=hot');exit;}-->
 <!--{/if}-->
 <!--{template common/header}-->
-
 <script type="text/javascript">
 	function getvisitclienthref() {
 		var visitclienthref = '';
@@ -77,6 +76,35 @@
 			<!--{/if}-->
 		</ul>
 	</div>
+                                       <ul class="countdown">
+                                       <li>&nbsp;剩下</li>
+                                       <li> <span id="days">00</span>
+                                       <p id="days_ref">天</p>
+                                       </li>
+                                       <li class="seperator">.</li>
+                                       <li> <span id="hours">00</span>
+                                       <p id="hours_ref">时</p>
+                                       </li>
+                                       <li class="seperator">:</li>
+                                       <li> <span id="minutes">00</span>
+                                       <p id="minutes_ref">分</p>
+                                       </li>
+                                       <li class="seperator">:</li>
+                                       <li> <span id="seconds">00</span>
+                                       <p id="seconds_ref">秒</p>
+                                       </li>
+                                       <li>过去</li>
+                                       <li> <span id="passdays">00</span>
+                                       <p class="days_ref">天</p>
+                                       </li>
+                                        <p>我从2026穿越回来,在2016年5月1日这天开启了
+                                       	时间机器倒计时,十年后,高房价终结,人人都有房.
+                                       	<B>我是擎天柱</B>,在这里召唤所有拒当接盘侠的屌丝们,we are here,we are waiting.</p>
+                                       </ul>
+                                      <script type="text/javascript">
+                                        setInterval(getRTime,1000); 
+                                      </script>
+                                      <div style="clear:both"></div>
 </header>
 <!-- header end -->
 <!--{hook/index_top_mobile}-->
