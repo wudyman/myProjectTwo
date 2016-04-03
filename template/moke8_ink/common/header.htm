@@ -27,8 +27,9 @@
 		<link rel="stylesheet" type="text/css" id="diy_common" href="{$_G['setting']['csspath']}{STYLEID}_css_diy.css?{VERHASH}" />
 	<!--{/if}-->
        <!--dongxw mark-->
-             <script type="text/javascript" src="{$_G[setting][jspath]}jquery.min.js?{VERHASH}"></script>
-             <script type="text/javascript" src="{$_G[setting][jspath]}jquery.downCount.js?{VERHASH}"></script>
+             <!--<script type="text/javascript" src="{$_G[setting][jspath]}jquery.min.js?{VERHASH}"></script>-->
+             <!--<script type="text/javascript" src="{$_G[setting][jspath]}jquery.downCount.js?{VERHASH}"></script>-->
+             <script type="text/javascript" src="{$_G[setting][jspath]}downCount.js?{VERHASH}"></script>
 </head>
 
 <body id="nv_{$_G[basescript]}" class="pg_{CURMODULE}{if $_G['basescript'] === 'portal' && CURMODULE === 'list' && !empty($cat)} {$cat['bodycss']}{/if}" onkeydown="if(event.keyCode==27) return false;">
@@ -127,32 +128,31 @@
 					<!--{eval $mnid = getcurrentnav();}-->
 					<h2><!--{if !isset($_G['setting']['navlogos'][$mnid])}--><a href="{if $_G['setting']['domain']['app']['default']}http://{$_G['setting']['domain']['app']['default']}/{else}./{/if}" title="$_G['setting']['bbname']">{$_G['style']['boardlogo']}</a><!--{else}-->$_G['setting']['navlogos'][$mnid]<!--{/if}--></h2>
                                        <ul class="countdown">
-                                       <li> <span class="days">00</span>
-                                       <p class="days_ref">days</p>
+                                       <li>剩下</li>
+                                       <li> <span id="days">00</span>
+                                       <p id="days_ref">天</p>
                                        </li>
                                        <li class="seperator">.</li>
-                                       <li> <span class="hours">00</span>
-                                       <p class="hours_ref">hours</p>
+                                       <li> <span id="hours">00</span>
+                                       <p id="hours_ref">时</p>
                                        </li>
                                        <li class="seperator">:</li>
-                                       <li> <span class="minutes">00</span>
-                                       <p class="minutes_ref">mins</p>
+                                       <li> <span id="minutes">00</span>
+                                       <p id="minutes_ref">分</p>
                                        </li>
                                        <li class="seperator">:</li>
-                                       <li> <span class="seconds">00</span>
-                                       <p class="seconds_ref">secs</p>
+                                       <li> <span id="seconds">00</span>
+                                       <p id="seconds_ref">秒</p>
                                        </li>
-                                       <p>ʮ��</p>
-                                       <p>hi, i am A, from futurn, in that time, </p>
-                                       <p>high house price game over,</p>
+                                       <li>过去</li>
+                                       <li> <span id="passdays">00</span>
+                                       <p class="days_ref">天</p>
+                                       </li>
+                                        <p>我,路人甲,从2026穿越回来,在2016年5月1日这天
+                                       	开启了时间机器倒计时,十年后,高房价终结,人人有房,不用再为其为奴虚度一生.拒绝房奴,去享受生活追寻更有意义的人生吧.</p>
                                        </ul>
                                       <script type="text/javascript">
-                                      	$('.countdown').downCount({
-                                      		date: '12/24/2020 12:00:00',
-                                      		offset: +10
-                                      	}, function () {
-                                      		alert('count down end!');
-                                      	});
+                                        setInterval(getRTime,1000); 
                                       </script>
 					<div class="drawnav"><table><tr style="height:98px;"><td class="drawnav_l"></td>
 	<td class="drawnav_m1"><div class="drawnav_m2">

@@ -9,11 +9,11 @@ http://www.ahome.me
  ---------------------------------- */
  
 /*水墨导航栏*/
-			.drawnav{float:right;padding-top:10px;}
-			    .drawnav_l{background:url({IMGDIR}/more/loginbar_left.png) right center no-repeat;width:58px;}
+			.drawnav{float:right;padding-top:15px;}
+			    .drawnav_l{background:url({IMGDIR}/more/loginbar_left.png) right center no-repeat;width:38px;}
 			    .drawnav_m1{background:url({IMGDIR}/more/loginbar_middle.png) left center repeat-x;}
 		    	.drawnav_m2{margin-left:-1px;margin-right:-1px;padding-top:0px;padding-bottom:20px;}
-			    .drawnav_r{background:url({IMGDIR}/more/loginbar_right.png) left center no-repeat;width:61px;}
+			    .drawnav_r{background:url({IMGDIR}/more/loginbar_right.png) left center no-repeat;width:51px;}
 
 
 /*重载导航栏，本风格禁止置顶浮动*/
@@ -76,12 +76,12 @@ ul.countdown li {
 	display: inline-block;
 }
 ul.countdown li span {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 300;
-	line-height: 24px;
+	line-height: 22px;
 }
 ul.countdown li.seperator {
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 22px;
 	vertical-align: top;
 }
