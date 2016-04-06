@@ -49,7 +49,7 @@
 					<!--{hook/forumdisplay_thread_mobile $key}-->
                     <a href="forum.php?mod=viewthread&tid=$thread[tid]&extra=$extra" $thread[highlight] >
 					{$thread[subject]}
-					<span class="by">$thread[author]</span>
+					<span class="by">$thread[author] - $thread[dateline]</span>
 					</a>
 					<span class="num">{$thread[replies]}</span>
 					<!--{if in_array($thread['displayorder'], array(1, 2, 3, 4))}-->
