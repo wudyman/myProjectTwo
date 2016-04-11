@@ -3,8 +3,8 @@
  * Author: Wudy
  */
 function getRTime(){ 
-var StartTime=new Date('2016/4/9 00:00:00'); //开始时间 
-var EndTime= new Date('2026/4/9 00:00:00'); //截止时间 
+var StartTime=new Date('2016/4/1 00:00:00'); //开始时间 
+var EndTime= new Date('2026/4/1 00:00:00'); //截止时间 
 var NowTime = new Date(); 
 var totalT =EndTime.getTime() - StartTime.getTime(); 
 var t =EndTime.getTime() - NowTime.getTime(); 
