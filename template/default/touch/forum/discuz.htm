@@ -107,18 +107,31 @@
 <!-- header end -->
 <!--{hook/index_top_mobile}-->
 <!-- main forumlist start -->
-<div class="wp wm" id="wp">
+<!--<div class="wp wm" id="wp">-->
 	<!--{loop $catlist $key $cat}-->
-	<div class="bm bmw fl">
-		<div class="subforumshow bm_h cl" href="#sub_forum_$cat[fid]">
-			<span class="o"><img src="{STATICURL}image/mobile/images/collapsed_<!--{if !$_G[setting][mobile][mobileforumview]}-->yes<!--{else}-->no<!--{/if}-->.png"></span>
-		<h2><a href="javascript:;">$cat[name]</a></h2>
+	<div class="catlist">
+		<div class="brtb subforumshow cl" href="#sub_forum_$cat[fid]">
+		<h1 class="f15">
+                                 <a href="javascript:;">$cat[name]</a>
+		 <span class="y"><img src="{STATICURL}image/mobile/images/collapsed_<!--{if !$_G[setting][mobile][mobileforumview]}-->yes<!--{else}-->no<!--{/if}-->.png"></span>
+                   </h1>
 		</div>
-		<div id="sub_forum_$cat[fid]" class="sub_forum bm_c">
-			<ul>
+		<!--<div id="sub_forum_$cat[fid]" class="sub_forum bm_c">-->
+			<ul class="s_forum" id="sub_forum_$cat[fid]" style="display: block;">
 				<!--{loop $cat[forums] $forumid}-->
 				<!--{eval $forum=$forumlist[$forumid];}-->
-				<li><a href="forum.php?mod=forumdisplay&fid={$forum['fid']}"><!--{if $forum[todayposts] > 0}--><span class="num">$forum[todayposts]</span><!--{/if}-->{$forum[name]}</a></li>
+				<li class="brtb">
+				      <!--{if $forum[icon]}-->
+					$forum[icon]
+				      <!--{else}-->
+					<a href="$forumurl"{if $forum[redirect]} target="_blank"{/if}><img src="{IMGDIR}/forum{if $forum[folder]}_new{/if}.gif" align="left" alt="$forum[name]" /></a>
+				      <!--{/if}-->
+                                                                       <a href="forum.php?mod=forumdisplay&fid={$forum['fid']}" class="a">
+                                                                                <p class="f_nm f15">{$forum[name]}</p> 
+                                                                                                                                            <p class="f11 xg1 f_dp">{$forum[description]}</p>
+                                                                                <!--{if $forum[todayposts] > 0}--><span class="l yy f12">$forum[todayposts]</span><!--{/if}-->                                                                                                                                                   
+                                                                      </a>
+                                                                 </li>
 				<!--{/loop}-->
 			</ul>
 		</div>
